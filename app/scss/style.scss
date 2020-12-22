@@ -1,10 +1,276 @@
 @import 'vars';
 @import 'global';
+@import 'fonts';
 
 
+.header{
+  background-color: #eef1f3;
+  color: #fff;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    height: 97px;
+    align-items: center;
+  }
+  &__logo{
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    padding-left: 53px;
+    span{
+      color: $blue;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -10px;
+      height: 50px;
+      width: 50px;
+      background-image: url('../images/header-logo.png');
+    }
+  }
+  &__profile{
+    display: flex;
+  }
+  &__inner-btn{
+    background-color: $blue;
+    border-radius: 55px;
+    padding: 12px 18px;
+    margin-right: 37px;
+    transition: all .4s;
+  }
+  &__inner-btn:hover{
+    background-color: #fff;
+    color: $blue;
+    cursor: pointer;
+  }
+}
 
+.header__bottom{
+  background-color: #fff;
+}
+.header__bottom-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 82px;
+  text-transform: uppercase;
+}
+.header__bottom-nav{
+  li{
+    display: inline-block;
+    a{
+      @include f500;
+      font-size: 15px;
+      color: #333333;
+      padding: 11px;
+    }
+  }
+}
+.header__bottom-search{
+  display: flex;
+  align-items: center;
+  max-width: 360px;
+  width: 100%;
+  height: 46px;
+  padding: 0 23px;
+  border: 1px solid #d9dfe5;
+  border-radius: 40px;
+  position: relative;
+  button{
+    position: absolute;
+    background-color: $blue;
+    border: none;
+    height: 18px;
+    width: 70px;
+    border-radius: 40px;
+    background-image: url(../images/search.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 22px 0;
+    right: 0;
+  }
+}
+.header__bottom-input{
+  border: none;
+}
 
+.header__profile{
+  display: flex;
+  align-items: center;
+}
+.header__icons{
+  position: relative;
+  margin-left: 26px;
+  &::before{
+    font-size: 20px;
+    color: #7e8fa1;
+  }
+  span{
+    position: absolute;
+    top: -11px;
+    right: -11px;
+    border-radius: 50%;
+    color: #fff;
+    padding: 2px 6px;
+    background-color: #ff6a6c;
+  }
+}
 
+.header__massage{
+  span{
+    background-color: #62d03b;
+  }
+}
+.header__basket{
+  span{
+    background-color: #0674ec;
+  }
+}
+.user{
+  margin-left: 35px;
+  max-width: 180px;
+  display: flex;
+  justify-content: space-between;
+  &__info{
+    margin-left: 15px;
+    min-width: 105px;
+  }
+  &__name{
+    font-size: 16px;
+    color: #333333;
+  }
+  &__money{
+    @include f500;
+    font-size: 16px;
+    color: $blue;
+    margin-top: 10px;
+  }
+}
 
+.products-slide{
+  background-color: $blue;
+  color: #fff;
+  padding-top: 175px;
+  padding-bottom: 235px;
+  text-align: center;
+  position: relative;
+  &__title{
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 70px;
+  }
+  &__text{
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 70px;
+    span{
+      display: block;
+      font-weight: 500;
+      font-size: 20px;
+    }
+  }
+}
+.products-slide__btn{
+  margin-top: 68px;
+  a{
+    color: #fff;
+  }
+  &1{
+    padding: 20px 30px;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    transition: all .4s;
+  }
+  &1:hover{
+    background-color: #fff;
+    color: $blue;
+    cursor: pointer;
+  }
+  .btn2{
+    margin-left: 30px;
+  }
+}
+
+.search__product{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: -70px;
+}
+.block1{
+  position: absolute;
+  top: -26px;
+  width: 1080px;
+  height: 135px;
+  background-color: #fff;
+  opacity: 0.6;
+  z-index: 1;
+  border-radius: 5px;
+}
+.block2{
+  position: absolute;
+  top: -13px;
+  width: 1110px;
+  height: 135px;
+  background-color: #fff;
+  z-index: 2;
+  opacity: 0.8;
+  border-radius: 5px;
+}
+.block3{
+  position: absolute;
+  width: 1140px;
+  height: 135px;
+  background-color: #fff;
+  z-index: 3;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  button{
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    outline: none;
+    border: none;
+    background-color: $blue;
+    border-radius: 5px;
+    padding: 20px 60px;
+    color: #fff;
+  }
+}
+.block3-inner{
+  position: absolute;
+  max-width: 810px;
+  height: 55px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.input__btn{
+  position: absolute;
+  left: 40px;
+  top: 0;
+  min-width: 615px;
+  border: 1px solid #d9dfe5;
+  padding: 20px 30px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+select{
+  position: absolute;
+  right: 13px;
+  border: 1px solid #d9dfe5;
+  padding: 17px 25px 20px 25px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  top: 0;
+  font-size: 16px;
+  color: #555555;
+  font-size: 400;
+  outline: none;
+}
 
 
