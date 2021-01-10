@@ -14,7 +14,8 @@ a{
 body{
   font-family: 'Quicksand', sans-serif;
   font-weight: 400;
-  color: #555555;
+  color: $text;
+  font-size: 16px;
 }
 ul,
 li{
@@ -23,7 +24,8 @@ li{
   list-style: none;
 }
 .container{
-  min-width: 1140px;
+  max-width: 1170px;
+  margin: 0 auto;
   padding: 0 15px;
 }
 
